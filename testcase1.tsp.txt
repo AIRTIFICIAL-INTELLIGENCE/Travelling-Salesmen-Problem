@@ -1,4 +1,4 @@
-NAME: kroB100
+NAME: teatcase1
 TYPE: TSP
 COMMENT: 100-city problem B (Krolak/Felts/Nelson)
 DIMENSION: 100
