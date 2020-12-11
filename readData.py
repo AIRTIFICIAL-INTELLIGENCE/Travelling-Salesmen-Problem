@@ -17,7 +17,7 @@ class ReadData():
     def getFormat(self):
         format_ = "None"
         try:
-            with open('kroB100.tsp.txt') as data:
+            with open('testcase1.tsp.txt') as data:
                 datalist = data.read().split()
                 for ind, elem in enumerate(datalist):
                     if elem == "EDGE_WEIGHT_FORMAT:":
@@ -35,7 +35,7 @@ class ReadData():
     def getEdgeWeightType(self):
         EdgeType = "None"
         try:
-            with open('kroB100.tsp.txt') as data:
+            with open('testcase1.tsp.txt') as data:
                 datalist = data.read().split()
                 for ind, elem in enumerate(datalist):
                     if elem == "EDGE_WEIGHT_TYPE:":
@@ -60,7 +60,7 @@ class ReadData():
         """
         size = 0
         try:
-            with open('kroB100.tsp.txt') as data:
+            with open('testcase1.tsp.txt') as data:
                 datalist = data.read().split()
                 for ind, elem in enumerate(datalist):
                     if elem == "DIMENSION:":
@@ -77,7 +77,7 @@ class ReadData():
             sys.exit(1)
 
     def read_Data(self):
-        with open('kroB100.tsp.txt') as data:
+        with open('testcase1.tsp.txt') as data:
             cities = []
             Isdata = True
             while (Isdata):
@@ -150,7 +150,7 @@ class ReadData():
             return DistanceMat
 
         elif DataFormat == "LOWER_DIAG_ROW":
-            with open('kroB100.tsp.txt') as file:
+            with open('testcase1.tsp.txt') as file:
                 indicator = False
                 data = file.read().split()
                 templist = []
@@ -180,7 +180,7 @@ class ReadData():
                     DistanceMat[i] = temp
                 return DistanceMat
         elif DataFormat == "UPPER_DIAG_ROW":
-            with open('kroB100.tsp.txt') as file:
+            with open('testcase1.tsp.txt') as file:
                 indicator = False
                 data = file.read().split()
                 templist = []
